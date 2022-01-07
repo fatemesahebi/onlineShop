@@ -1,0 +1,40 @@
+.navbar{
+    background-color: var(--first-color);
+
+}
+.navbar__items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: 500;
+    padding: 30px 50px;
+    text-transform: capitalize;
+}
+.navbar__items__img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    vertical-align: middle;
+}
+ul{
+    list-style-type: none;
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar li:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: var(--second-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.navbar li:hover:after {
+    width: 100%;
+    left: 0;
+}

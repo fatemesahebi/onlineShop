@@ -1,0 +1,23 @@
+header{
+    background: url("../../images/woman-holding-various-shopping-bags-copy-space.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 70vh;
+    overflow-x: hidden;
+}
+.headerBody{
+    width:90vw;
+    height: 70vh;
+    margin: auto;
+    border: 5px solid rgba(47, 45, 45, 0.67);
+}
+.headerBody__text{
+    color:var(--second-color);
+    float:right;
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 100px;
+    text-transform: capitalize;
+    width: 700px;
+    text-align: center;
+}

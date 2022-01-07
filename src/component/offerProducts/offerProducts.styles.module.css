@@ -1,0 +1,17 @@
+.offerProducts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap: 30px;
+}
+.offerProducts h3{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.offerProducts h3 img{
+    padding:5px 10px;
+    vertical-align: middle;
+}
+
