@@ -2,6 +2,7 @@ html{
   font-size: 62.5%;
   --first-color:#FFC837;
   --second-color: rgba(44, 41, 41, 0.88);
+  --swiper-theme-color:rgba(44, 41, 41, 0.88) !important;
 
 }
 body {
@@ -42,8 +43,22 @@ button{
   transform: scale(1.1);
   transition: all ease-in 0.3s;
 }
+.btn__yellow{
+  color: var(--second-color);
+  background-color:var(--first-color);
+  font-weight: 700;
+}
 .link{
   text-decoration: none;
-  color: var(--second-color);
+  color: inherit;
 }
+.swiper-pagination{
+  visibility: hidden;
+}
+.swiper{
+  width: 80vw !important;
+  height: 400px;
+}
+
+
 

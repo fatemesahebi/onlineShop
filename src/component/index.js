@@ -12,8 +12,8 @@ import OfferProducts from "./offerProducts/offerProducts";
 import MiddleNaBar from "./MiddleNavBar/MiddleNaBar";
 import ProductPages from "./productsPage/productPages";
 import ProductCard from "./productCard/productCard";
-import ProductCardContainer from "./productCardContainer/productCardContainer";
 import Footer from "./Footer/Footer";
+import Slider from "./slider/Slider";
 export {
     Home,
     Header,
@@ -24,8 +24,8 @@ export {
     MiddleNaBar,
     ProductPages,
     ProductCard,
-    ProductCardContainer,
-    Footer
+    Footer,
+    Slider
 
 
 }

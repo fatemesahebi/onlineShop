@@ -67,7 +67,7 @@ export function makeServer({environment = "test"} = {}) {
                 createProduct(5, 'table phone ', 'it is beautiful', 'home decoration',
                     100, tablePhoneImg, 0));
             server.create("product",
-                createProduct(6, 'body oil ', 'it is beautiful', 'beauty',
+                createProduct(6, 'Body oil ', 'it is beautiful', 'beauty',
                     230, bodyOilImg, 5));
             server.create("product",
                 createProduct(7, 'battle coffee ', 'it is beautiful', 'food',
@@ -150,8 +150,8 @@ export function makeServer({environment = "test"} = {}) {
             this.get('/home-decoration',(schema)=>{
                 return schema.products.all().filter(item=>item.type==='home decoration')
             });
-            this.get("/products/:title", (schema,request) => {
-                return schema.products.findBy({title:request.params.title})
+            this.get("/products/:id", (schema,request) => {
+                return schema.products.find(request.params.id)
 
                 // let title = request.params.title;
                 // const product = schema.products.find(title)

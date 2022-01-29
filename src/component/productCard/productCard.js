@@ -4,8 +4,7 @@ import styles from './productCard.styles.module.css'
 function ProductCard({title,price,type,offPrice,offPercent,image,id}){
     return(
         <>
-
-                <Link className={'link'} to={`/products/${title}`}>
+                <Link className={'link'} to={`/products/${id}`}>
                     <div className={styles.productCard}>
                     <img src={image}/>
                     <h4>{title}</h4>

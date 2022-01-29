@@ -1,7 +1,10 @@
 import {useEffect, useState} from "react";
 import styles from './offerProducts.styles.module.css'
-import {ProductCard, ProductCardContainer,} from "../index";
+import {ProductCard, Slider,} from "../index";
 import {offerImg} from "../index";
+
+import {SwiperSlide } from 'swiper/react';
+
 
 function OfferProducts() {
     const [productList, setProductList] = useState([])
@@ -20,16 +23,19 @@ function OfferProducts() {
                 <img src={offerImg}/>
                 OFF PRODUCTS
             </h3>
-            <ProductCardContainer list={productList} cardCount={3}/>
-            <div style={{display: 'flex', flexDirection: 'row', columnGap: '30px'}}>
-                {
-                    productList.map(product =>
-                        <ProductCard title={product.title} price={product.price} type={product.type}
-                                     offPrice={product.OffPrice} offPercent={product.offerPercent}
-                        image={product.image} id={product.id} />)
-                }
+               <Slider>
+                   {productList.map(product =>
+                       <SwiperSlide>
+                           <ProductCard title={product.title} price={product.price}
+                                        type={product.type}
+                                        offPrice={product.OffPrice}
+                                        offPercent={product.offerPercent}
+                                        image={product.image} id={product.id}/>
+                       </SwiperSlide>
+                   )}
+               </Slider>
 
-            </div>
+
         </div>
 
     )

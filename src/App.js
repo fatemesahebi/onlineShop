@@ -1,18 +1,20 @@
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {Home, ProductPages} from "./component";
-import Off from "./component/off/off";
-import {useEffect} from "react";
+import {Home, MiniHeader, ProductPages} from "./component";
+// import {Provider} from "react-redux";
+// import store from './component/redux/store'
 function App() {
   return (
    <div>
-       <BrowserRouter>
-           <Routes>
-=                   <Route index element={<Home/>}/>
-                   <Route path={'/products/:title'} element={<ProductPages/>} />
+           <BrowserRouter>
+               <Routes>
+                   <Route path={'/'} element={<MiniHeader/>}>
+                       <Route index element={<Home/>}/>
+                       <Route path={'/products/:id'} element={<ProductPages/>} />
+                   </Route>
+               </Routes>
+           </BrowserRouter>
 
-           </Routes>
-       </BrowserRouter>
    </div>
   );
 }
